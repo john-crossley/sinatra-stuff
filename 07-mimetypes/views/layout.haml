@@ -1,0 +1,9 @@
+!!! 5
+%html{lang: "en-GB"}
+  %head
+    %meta{charset: "utf-8"}
+    %title Image: #{@image[:title]}
+
+%body
+  %p The current user is #{@user}.
+  = yield

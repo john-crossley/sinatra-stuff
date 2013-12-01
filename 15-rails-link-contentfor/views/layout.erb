@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Exibition</title>
+  <%= yield_content :css %>
+  <%= yield_content :js %>
+</head>
+<body>
+
+  <p>The current user is <%= @user %>.</p>
+
+  <ul>
+    <li><a href="/sessions/new">New Session</a></li>
+    <li><%= @height %></li>
+    <li>The current environment is: <%= @environment %></li>
+  </ul>
+
+  <% if @message %>
+  <p>You have a message:</p>
+  <blockquote>
+    <%= @message %>
+  </blockquote>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>

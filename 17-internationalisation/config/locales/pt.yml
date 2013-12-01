@@ -1,0 +1,6 @@
+pt:
+  hello:
+    world: Olá Mundo!
+    world-with-message: Mundo diz - %{message}
+  app:
+    title: Testar i18n

@@ -1,0 +1,23 @@
+!!! 5
+%html{lang: "en-GB"}
+  %head
+    %meta{charset: "utf-8"}
+    %title "Hello"
+
+%body
+
+  %h1 My Awesome Application
+
+  -if session['username'].nil?
+    %ul
+      -if settings.environment == :development
+        %li
+          %a(href="/auth/developer") Login with developer
+      %li
+        %a(href="/auth/twitter") Login with twitter
+  -else
+    %p Welcome back, #{session['username']}
+
+
+
+  =yield

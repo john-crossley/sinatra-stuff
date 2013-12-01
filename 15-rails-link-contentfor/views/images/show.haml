@@ -1,0 +1,7 @@
+%h1 Image: #{@image.title}
+
+%p
+  %img{src: @image.url, alt: @image.title}
+
+%p
+  %a{href: "/images/#{@index}/download"} Download

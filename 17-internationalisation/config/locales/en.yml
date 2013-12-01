@@ -1,0 +1,6 @@
+en:
+  hello:
+    world: Hello World!
+    world-with-message: World says - %{message}
+  app:
+    title: Test i18n

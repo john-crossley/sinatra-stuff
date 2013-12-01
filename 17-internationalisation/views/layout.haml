@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title=t "app.title"
+  %body
+    -if flash[:notice]
+      %div(style='color:green')=flash[:notice]
+    -if flash[:alert]
+      %div(style='color:red')=flash[:alert]
+
+    %h1=t "app.title"
+    =yield # main content

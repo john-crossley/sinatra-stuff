@@ -1,0 +1,12 @@
+ INFO app: ~~> Entering request
+ INFO app: <~~ Exiting request
+ INFO app: ~~> Entering request
+ INFO app: <~~ Exiting request
+[
+[
+[
+[
+[INFO] 2013-08-14 15:20:01 :: ~~> Entering request
+[INFO] 2013-08-14 15:20:01 :: <~~ Exiting request
+[INFO] 2013-08-14 15:20:02 :: ~~> Entering request
+[INFO] 2013-08-14 15:20:02 :: <~~ Exiting request

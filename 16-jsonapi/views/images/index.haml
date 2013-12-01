@@ -1,0 +1,34 @@
+-content_for :css do
+  %link(rel="stylesheet" href="/css/images.css")
+-content_for :js do
+  %script(src="/js/index.js")
+
+%h1 Images
+
+-if @images.count == 0
+  %h4 You have no images
+
+-@images.each do |image|
+  %h2
+    %a{href: "/images/#{image.id}"}=image[:title]
+    %p
+      %img{src: image[:url], width: 40}
+    %blockquote=image[:description]
+
+%h2 Store a new image
+
+%form(action="/images" method="post")
+  %p
+    %label(for="title") Title
+    %input(type="text" placeholder="Enter a title" name="image[title]")
+
+  %p
+    %label(for="url") URL
+    %input(type="url" placeholder="Enter a URL" name="image[url]")
+
+  %p
+    %label(for="description") Description
+    %textarea(placeholder="Enter a quick description" name="image[description]" rows="3")
+
+  %p
+    %input(type="submit" value="Create Image")
